@@ -15,31 +15,34 @@
   
     <main>
         <div class="logo">
-            <img src="./assets/images/Logo.png" alt="logod Alura">
+            <a href="./index.html"><img src="./assets/images/Logo.png" alt="logod Alura"></a>
+            
         </div>
         <div class="ingreso">
+            <form>
+                <div class="textoAEncriptar">
+                    <input id="texto" type="search" placeholder="Ingrese aquí el texto aquí">
+                    <!-- <textarea id="texto" cols="50" rows="2" placeholder="Ingrese aquí el texto aquí"></textarea> -->
+                </div>
+               
+    
+                <div class="botones">
+                    <p class="indicacion">Solo letras minúsculas y sin acentos</p>
+                    <button class="encriptar" id="encriptar">Encriptar</button>
+                    <button class="desencriptar" id="desencriptar">Desencriptar</button>
+    
+                </div>
+            </form>
             
-            <div class="textoAEncriptar">
-                <input id="texto" type="text" placeholder="Ingrese aquí el texto aquí">
-                <!-- <textarea id="texto" cols="50" rows="2" placeholder="Ingrese aquí el texto aquí"></textarea> -->
-            </div>
-           
-
-            <div class="botones">
-                <p class="indicacion">Solo letras minúsculas y sin acentos</p>
-                <button class="encriptar">Encriptar</button>
-                <button class="desencriptar">Desencriptar</button>
-
-            </div>
 
         </div>
-        <div class="egreso">
-            <img src="./assets/images/Muñeco.png" alt="Muñeco">
+        <div class="egreso" id="egreso">
+          <!--   <img src="./assets/images/Muñeco.png" alt="Muñeco">
             <article>
                 <h3>Ningún mensaje fue encontrado</h3>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </article>
-            
+             -->
         </div>
 
 
@@ -48,5 +51,6 @@
         <p>Federico F. Becerra</p>
         <p>Grupo 5</p>
     </footer>
+    <script src="./assets/index.js"></script>
 </body>
 </html>

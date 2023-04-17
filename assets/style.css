@@ -78,13 +78,16 @@ input::placeholder {
     background-color: inherit;
     border: 1px solid #0A3871; 
 }
+/* .botones div{
+    display: flex;
+} */
 .indicacion{
     margin-left: 10px; 
     font-size: 12px
 }
 .egreso{
-    max-width: 25rem;
-    min-width: 10rem;
+    width: 25rem;
+  /*   min-width: 10rem; */
     height: 48rem;
     display:flex;   
     flex-direction: column;
@@ -126,5 +129,31 @@ footer{
     width: 100%;
     opacity: 60%;
 
+}
+@media screen and (max-width: 500px){
+    .botones button{
+        margin: 10px;
+        width: 18rem ;
+        height: 67px;
+        padding: 24px;
+        border-radius: 24px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .egreso{
+        max-width: 25rem;
+        min-width: 10rem;
+        height: 48rem;
+        display:flex;   
+        flex-direction: column;
+        justify-content: center;
+        /* padding-top: 10em; */
+        margin:1em;
+        background-color: #FFFFFF;
+        border-radius: 32px;
+    }
 }
 
