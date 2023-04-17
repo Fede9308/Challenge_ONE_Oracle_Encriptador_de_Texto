@@ -24,7 +24,7 @@ main{
     justify-content:space-around ;
 }
 .logo{
-    margin: 2rem;
+    margin: 1vw;
     margin-top: 3rem;
  
 }
@@ -39,6 +39,7 @@ main{
     margin-top: 10rem;
    /*  max-height: 90vh; */
     margin-left: 30px;
+    max-width: 43.8rem;
    
 }
 textarea{
@@ -54,11 +55,19 @@ textarea{
     height: 25rem;
     margin-bottom: 2em; 
     margin-left: 10px; 
+    margin-right: 10px;
 }
 textarea::placeholder {
     color: #0A3871;
     border: none;
+  } 
+  .alerta{
+    display: flex;
   }
+ button{
+    transition: 1s all;
+    cursor: pointer;
+ }
 .botones{
     margin-top: auto;
     margin-bottom: 3rem;
@@ -74,31 +83,42 @@ textarea::placeholder {
     font-weight: 400;
     font-size: 16px;
 }
-.encriptar{
+.botonOscuro{
     border: none ;
     background: #0A3871;
     color: #FFFFFF;
 }
-.desencriptar{
+.botonOscuro:hover{
+    background: #456d9e;
+    transform: scale(1.05);
+}
+.botonOscuro:active{
+    background: #183c64;
+    transform: scale(1.05);
+}
+.botonClaro{
     color: #0A3871;
     background-color: inherit;
     border: 1px solid #0A3871; 
 }
-/* .botones div{
-    display: flex;
-} */
+.botonClaro:hover{
+    transform: scale(1.05);
+}
+.botonClaro:active{
+    background: #c9e1fd;
+    border: none;
+}
+
 .indicacion{
     margin-left: 10px; 
     font-size: 12px
 }
 .egreso{
     width: 25rem;
-  /*   min-width: 10rem; */
     min-height: 48rem;
     display:flex;   
     flex-direction: column;
     justify-content: center;
-    /* padding-top: 10em; */
     margin:1em;
     background-color: #FFFFFF;
     border-radius: 32px;

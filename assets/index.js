@@ -31,7 +31,7 @@ function dibujarResultado(entrada) {
     } 
     else{
         resultados += `<h3 id="encriptado">${entrada}</h3>
-        <button class="copiar">Copiar</button>`
+        <button class="botonClaro">Copiar</button>`
     }
     
     resultado.innerHTML=resultados;
