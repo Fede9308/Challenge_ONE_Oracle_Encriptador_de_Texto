@@ -21,13 +21,17 @@ body{
 main{    
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content:space-around ;
 }
 .logo{
     margin: 2rem;
     margin-top: 3rem;
-    align-self: flex-start;
+ 
 }
+#logoHead{
+    width: 3rem;
+}
+
 .ingreso{
     display: flex;
     flex-direction: column;
@@ -37,25 +41,27 @@ main{
     margin-left: 30px;
    
 }
-input{
+textarea{
     display: flex;
     background-color: inherit;
+    resize: none;
     width: 90%;
     border: none;
     font-family: 'Inter';
     font-style: normal;
     color: #0A3871;
     font-size: 32px;
-    height: 10rem;
+    height: 25rem;
     margin-bottom: 2em; 
     margin-left: 10px; 
 }
-input::placeholder {
+textarea::placeholder {
     color: #0A3871;
+    border: none;
   }
 .botones{
     margin-top: auto;
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
 }
 .botones button{
     margin: 10px;
@@ -88,7 +94,7 @@ input::placeholder {
 .egreso{
     width: 25rem;
   /*   min-width: 10rem; */
-    height: 48rem;
+    min-height: 48rem;
     display:flex;   
     flex-direction: column;
     justify-content: center;
@@ -102,6 +108,7 @@ input::placeholder {
     margin: 1em;
 }
 #encriptado{
+    text-align: center;
     margin: 1em;
     color: #495057;
 }
@@ -130,23 +137,46 @@ footer{
     opacity: 60%;
 
 }
-@media screen and (max-width: 500px){
-    .botones button{
-        margin: 10px;
-        width: 18rem ;
-        height: 67px;
-        padding: 24px;
-        border-radius: 24px;
+@media screen and (max-width: 1200px){
+    main{    
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .logo{
+        margin: 1rem;
+        margin-top: 1rem;
+     
+    }
+    .ingreso{
+        margin-top: 2rem;
+    }
+    textarea{
+        display: flex;
+        background-color: inherit;
+       /*  resize: none; */
+        /* white-space: pre-wrap; */
+        width: 90%;
+        border: none;
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
+        color: #0A3871;
+        font-size: 32px;
+        height: 15rem;
+        margin-bottom: 20px; 
+        margin-left: 10px; 
+    }
+    .botones{
+        margin-top: auto;
+        margin-bottom: 1rem;
     }
 
     .egreso{
-        max-width: 25rem;
-        min-width: 10rem;
-        height: 48rem;
+       /*  max-width: 25rem;
+        min-width: 30rem; */
+        width: 90vw;
+        min-height: 15rem;
         display:flex;   
         flex-direction: column;
         justify-content: center;
@@ -155,5 +185,40 @@ footer{
         background-color: #FFFFFF;
         border-radius: 32px;
     }
+    .egreso img{
+        display: none;
+        height: 5rem;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .botones button{
+        margin: 10px;
+        max-width: 16.5rem ;
+        min-width: 10rem;
+        height: 67px;
+        padding: 24px;
+        border-radius: 24px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    #logoHead{
+        width: 1rem;
+    }
+   /*  .egreso{
+        max-width: 25rem;
+        min-width: 10rem;
+        height: 48rem;
+        display:flex;   
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10em;
+        margin:1em;
+        background-color: #FFFFFF;
+        border-radius: 32px;
+    } */
 }
 

@@ -1,5 +1,5 @@
 const resultado = document.getElementById('egreso')
-const input= document.querySelector('input')
+const input= document.querySelector('textarea')
 const encriptar = document.getElementById('encriptar') 
 const desencriptar = document.getElementById('desencriptar') 
 const busquedaTexto = document.forms[0] 
