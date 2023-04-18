@@ -3,38 +3,113 @@ const input= document.querySelector('textarea')
 const encriptar = document.getElementById('encriptar') 
 const desencriptar = document.getElementById('desencriptar') 
 const busquedaTexto = document.forms[0] 
+/* const textoEncriptado= document.querySelector('#encriptado') */
+/* const btnPcopiar= document.getElementById('btnCopiar') */
+
+
+
+dibujarResultado(input.value)
 
 busquedaTexto.addEventListener('submit', (event)=>{
     event.preventDefault()
     busquedaTexto.reset()
 })
 
-encriptar.addEventListener('click', (event)=>{
+encriptar.addEventListener('click', ()=>{
     encriptacion(input.value) 
+    console.log("contador1")
 })
-desencriptar.addEventListener('click',(event)=>{
-    desencriptacion(input.value) 
+desencriptar.addEventListener('click',()=>{
+    desencriptacion(input.value)
+    console.log("contador2") 
 })
 
-dibujarResultado(input.value)
+/* const observer= new MutationObserver(() =>{
+    const btnPcopiar= document.getElementById('btnCopiar');
+    if (btnPcopiar){
+        btnPcopiar.addEventListener('click', () => {
+            console.log("contador3")
+        })
+        observer.disconnect();
+    }
+}); */
+
+/* btnPcopiar.addEventListener('click', ()=>{
+    console.log("contador3")
+}) */
+
+/* btnPcopiar.addEventListener('click',()=> {
+    navigator.clipboard.writeText(textoEncriptado.innerText).then(() => {
+        console.log('Texto copiado al portapapeles');
+      }).catch((error) => {
+        console.error('Error al copiar el texto al portapapeles:', error);
+      });
+}) */;
+
+/* async function espera(){
+    await dibujarResultado();
+
+    
+
+    btnPcopiar.onclick = console.log("contador3")
+} */
+
+
+
+
 
 function dibujarResultado(entrada) {
-    let resultados='';
+    let resultados =''
     if (entrada.length == 0) {
-        resultado.innerHTML = 
+    /*     const textoFallido = document.createElement('div')
+        textoFallido.innerHTML = '<img src="./assets/images/Muñeco.png" alt="Muñeco"><article><h3>Ningún mensaje fue encontrado</h3><p>Ingresa el texto que desees encriptar o desencriptar.</p> </article>' ;
+       
+       resultado.appendChild(textoFallido) */
+       
+         resultados += 
         `<img src="./assets/images/Muñeco.png" alt="Muñeco">
         <article>
             <h3>Ningún mensaje fue encontrado</h3>
             <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </article>`
+        resultado.innerHTML=resultados;
+        
         return
     } 
     else{
-        resultados += `<h3 id="encriptado">${entrada}</h3>
-        <button class="botonClaro">Copiar</button>`
+        resultados = '';
+        resultado.innerHTML=resultados;
+        const textoEncriptado = document.createElement('h3');
+        const btnPcopiar = document.createElement('button');
+        btnPcopiar.className= 'btnCopiar';
+        btnPcopiar.innerText='Copiar';
+        textoEncriptado.innerText = entrada;
+        textoEncriptado.className='txtEncriptado'
+        resultado.appendChild(textoEncriptado);
+        resultado.appendChild(btnPcopiar);
+
+     
+        
+            btnPcopiar.addEventListener('click',()=> {
+                navigator.clipboard.writeText(textoEncriptado.innerText).then(() => {
+                    console.log('Texto copiado al portapapeles');
+                  }).catch((error) => {
+                    console.error('Error al copiar el texto al portapapeles:', error);
+                  });
+            }) 
+
+             /*   btnPcopiar.addEventListener('click', ()=>{
+            console.log("contador3")}); */
+        
+       /*  resultados += `<h3 id="encriptado">${entrada}</h3>
+        <button class="botonClaro" id="btnCopiar">Copiar</button>`; */
+        
+       
     }
     
-    resultado.innerHTML=resultados;
+    
+
+   /* textoFallido.parentNode.removeChild(textoFallido) */
 }
 
 function encriptacion(texto) {
@@ -106,6 +181,37 @@ function tieneAcento(texto) {
   }
 
 
+
+/*   const observer= new MutationObserver(() =>{
+    const btnPcopiar= document.getElementById('btnCopiar');
+    if (btnPcopiar){
+        btnPcopiar.addEventListener('click', () => {
+            console.log("contador3")
+        })
+        observer.disconnect();
+    }
+});
+observer.observe(document.body, { childList: true });
+ */
+/* function copyText (htmlElement){
+    if(!htmlElement){
+        return;
+    }
+
+    let elementText= htmlElement.innerText;
+
+    let inputElement = document.createElement('input');
+    inputElement.setAttribute('value', elementText);
+    document.body.appendChild(inputElement);
+    const contenido=inputElement;
+    const cb=navigator.clipboard;
+    cb.writeText(contenido.value)
+    console.log(cb)
+    inputElement.select();
+    document.execCommand('copy');
+   inputElement.parentNode.removeChild(inputElement);
+
+} */
 /* Las "llaves" de encriptación que utilizaremos son las siguientes:
 
 La letra "e" es convertida para "enter"

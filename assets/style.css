@@ -108,7 +108,13 @@ textarea::placeholder {
     background: #c9e1fd;
     border: none;
 }
-
+.btnCopiar:hover{
+    transform: scale(1.05);
+}
+.btnCopiar:active{
+    background: #c9e1fd;
+    border: none;
+}
 .indicacion{
     margin-left: 10px; 
     font-size: 12px
@@ -127,7 +133,7 @@ textarea::placeholder {
     text-align: center;
     margin: 1em;
 }
-#encriptado{
+.egreso h3{
     text-align: center;
     margin: 1em;
     color: #495057;
