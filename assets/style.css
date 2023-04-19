@@ -10,7 +10,6 @@ html{
 }
 body{
     display:flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
     height: 100vh;
     background-color: #F3F5FC;
@@ -37,7 +36,6 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 10rem;
-   /*  max-height: 90vh; */
     margin-left: 30px;
     max-width: 43.8rem;
    
@@ -59,8 +57,11 @@ textarea{
 }
 textarea::placeholder {
     color: #0A3871;
-    border: none;
+    
   } 
+  textarea:focus {
+    outline: none;
+  }
   .alerta{
     display: flex;
   }
@@ -153,7 +154,7 @@ textarea::placeholder {
 footer{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+   justify-content: space-around;
     border-top: solid 1px #0A3871;
     color: #0A3871;
     padding: 10px;
@@ -163,6 +164,21 @@ footer{
     opacity: 60%;
 
 }
+.listaIconosFooter{
+    display: flex;
+}
+.iconFooter{
+    margin: 10px;
+    list-style: none;
+    transition: 1s all;
+    cursor: pointer;
+}
+.iconFooter:hover{
+    transform: scale(1.05);
+}
+
+
+
 @media screen and (max-width: 1200px){
     main{    
         display:flex;
@@ -181,8 +197,6 @@ footer{
     textarea{
         display: flex;
         background-color: inherit;
-       /*  resize: none; */
-        /* white-space: pre-wrap; */
         width: 90%;
         border: none;
         font-family: 'Inter';
@@ -195,18 +209,15 @@ footer{
     }
     .botones{
         margin-top: auto;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 
     .egreso{
-       /*  max-width: 25rem;
-        min-width: 30rem; */
         width: 90vw;
         min-height: 15rem;
         display:flex;   
         flex-direction: column;
         justify-content: center;
-        /* padding-top: 10em; */
         margin:1em;
         background-color: #FFFFFF;
         border-radius: 32px;
@@ -234,17 +245,5 @@ footer{
     #logoHead{
         width: 1rem;
     }
-   /*  .egreso{
-        max-width: 25rem;
-        min-width: 10rem;
-        height: 48rem;
-        display:flex;   
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 10em;
-        margin:1em;
-        background-color: #FFFFFF;
-        border-radius: 32px;
-    } */
 }
 
