@@ -21,7 +21,7 @@ desencriptar.addEventListener('click',()=>{
 
 function dibujarResultado(entrada) {
     let resultados ='';
-    if (entrada.length == 0) {       
+    if (entrada.length == 0 || entrada[0] == ' ') {       
          resultados += 
         `<img src="./assets/images/Muñeco.png" alt="Muñeco">
         <article>
